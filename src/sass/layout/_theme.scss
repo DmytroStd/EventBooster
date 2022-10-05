@@ -1,0 +1,230 @@
+body.light {
+  background-color: var(--modal-bg-color);
+  color: var(--modal-primary-text-color);
+  background-image: url('../images/body/noise-sm.png');
+  background-size: cover;
+  background-position: left top;
+
+  @media screen and (min-width: 768px) {
+    background-image: url('../images/body/allnoise-md-light.png');
+  }
+
+  @media screen and (min-width: 1280px) {
+    background-image: url('../images/body/allnoise-lg-light.png');
+  }
+
+  header {
+    background-image: linear-gradient(
+        to right,
+        rgba(249, 200, 232, 0.4),
+        rgba(238, 227, 234, 0.4)
+      ),
+      url('../images/header/concert.png');
+    background-position: left bottom;
+    background-size: auto;
+    background-repeat: repeat-x;
+  }
+
+  .search-form,
+  .country-form {
+    border: 1px solid var(--accent-text-color);
+  }
+
+  .search-form__input,
+  .country-form__input,
+  .search-form__input::placeholder,
+  .country-form__input::placeholder {
+    color: var(--secondaty-text-color);
+  }
+
+  .search-form__svg,
+  .country-form__svg {
+    fill: var(--secondaty-text-color);
+  }
+
+  .footer-text {
+    color: var(--modal-primary-text-color);
+  }
+
+  .event_img,
+  .event_title,
+  .event_date,
+  .location_name {
+    color: var(--modal-primary-text-color);
+    font-weight: 500;
+    text-shadow: 0 0 5px var(--primary-text-color),
+      0 0 10px var(--primary-text-color), 0 0 15px var(--primary-text-color),
+      0 0 20px var(--accent-text-color), 0 0 15px var(--accent-text-color),
+      0 0 25px var(--accent-text-color), 0 0 20px var(--accent-text-color),
+      0 0 5px var(--accent-text-color);
+  }
+
+  .paginated__item:hover,
+  .paginated__item:focus {
+    box-shadow: 0 0 5px var(--primary-text-color),
+      0 0 10px var(--primary-text-color), 0 0 15px var(--primary-text-color),
+      0 0 20px var(--primary-text-color), 0 0 15px var(--accent-text-color),
+      0 0 30px var(--accent-text-color), 0 0 20px var(--accent-text-color),
+      0 0 5px var(--accent-text-color);
+
+    transform: scale(1.05, 1.05);
+    border-radius: 10px 0px;
+  }
+
+  .item-active {
+    color: var(--primary-text-color);
+    background-color: var(--accent-text-color);
+    border: 1px solid var(--accent-text-color);
+    border-radius: 10px 0px;
+  }
+
+  .paginated__item {
+    font-weight: 500;
+    box-shadow: 0 0 5px var(--accent-text-color),
+      0 0 10px var(--accent-text-color), 0 0 15px var(--accent-text-color),
+      0 0 20px var(--accent-text-color), 0 0 15px var(--primary-text-color),
+      0 0 30px var(--primary-text-color), 0 0 20px var(--primary-text-color),
+      0 0 5px var(--primary-text-color);
+
+    transform: scale(1.05, 1.05);
+    border-radius: 10px 0px;
+  }
+
+  .paginated__item.back__item {
+    border-radius: 0px 70px 70px 0px;
+  }
+
+  .paginated__item.forward__item {
+    border-radius: 100px 0px 0px 100px;
+  }
+
+  .paginated__item {
+    color: var(--modal-accent-text-color);
+  }
+
+  .item-active {
+    color: var(--primary-text-color);
+  }
+}
+
+.theme__container {
+  position: absolute;
+  top: 75px;
+  right: 27px;
+
+  @media screen and (min-width: 768px) {
+    top: 90px;
+    right: 50px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    top: 103px;
+    right: 31px;
+  }
+  // z-index: 2;
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 12px;
+  height: 6px;
+
+  @media screen and (min-width: 768px) {
+    width: 15px;
+    height: 8px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 18px;
+    height: 10px;
+  }
+
+  border-radius: 50px;
+  transform: scale(1.5);
+  cursor: pointer;
+
+  background-color: var(--accent-text-color);
+}
+
+.ball {
+  position: absolute;
+  display: flex;
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+
+  background-color: var(--primary-text-color);
+
+  @media screen and (min-width: 768px) {
+    // top: 0.5px;
+    right: 6px;
+    width: 12px;
+    height: 12px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    // top: 0.5px;
+    right: 7px;
+    width: 14px;
+    height: 14px;
+  }
+}
+
+.checkbox:checked + .label .ball {
+  background-color: var(--modal-primary-text-color);
+  transform: translateX(5px);
+
+  @media screen and (min-width: 768px) {
+    transform: translateX(7px);
+  }
+
+  @media screen and (min-width: 1280px) {
+    transform: translateX(9px);
+  }
+}
+
+.theme-iqon-hidden {
+  display: none;
+}
+
+.theme__iqon-sun {
+  // position: relative;
+
+  // bottom: 8px;
+  // left: 1px;
+  width: 6px;
+  height: 6px;
+
+  @media screen and (min-width: 768px) {
+    // bottom: 2px;
+    // right: 2px;
+    width: 10px;
+    height: 10px;
+  }
+}
+
+.theme__iqon-moon {
+  // position: relative;
+  // fill: var(--accent-bg-color);
+  fill: var(--primary-text-color);
+  // bottom: 5px;
+  // right: 3px;
+  width: 6px;
+  height: 6px;
+  @media screen and (min-width: 768px) {
+    // bottom: 6px;
+    // right: 6px;
+    width: 10px;
+    height: 10px;
+  }
+}

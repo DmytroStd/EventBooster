@@ -1,0 +1,122 @@
+<header class="header">
+  <div class="header__container container">
+    <!-- Logo -->
+    <div class="logo">
+      <a class="logo__link" href="./">
+        <svg class="logo__svg" width="136" height="65">
+          <use
+            class="logo__svg--mob"
+            href="./images/icons.svg#icon-logo-mob"
+          ></use>
+          <use
+            class="logo__svg--tab"
+            href="./images/icons.svg#icon-logo-tab"
+          ></use>
+          <use
+            class="logo__svg--desk"
+            href="./images/icons.svg#icon-logo-desk"
+          ></use>
+        </svg>
+      </a>
+    </div>
+    <!-- Basket -->
+    <div class="basket__timer--header"></div>
+    <div class="basket basket--header">
+      <a class="basket__link basket__link--header js-basket" href="#">
+        <svg
+          class="basket__svg basket__svg--header"
+          aria-label="shopping-basket"
+          width="20"
+          height="20"
+        >
+          <use href="./images/icons.svg#icon-cart"></use>
+        </svg>
+        <div
+          class="basket__container basket__container--modal hidden js-basket-head"
+        >
+          <span class="basket__num basket__num--modal js-basket-num-head">
+            0
+          </span>
+        </div>
+      </a>
+    </div>
+    <h1 class="header__title animate__animated animate__lightSpeedInRight">
+      Find best events<br />around the world
+    </h1>
+
+    <!-- Theme checker-->
+    <div class="theme__container">
+      <input type="checkbox" class="checkbox" id="checkbox" />
+      <label for="checkbox" class="label">
+        <span class="ball center">
+          <svg class="theme__iqon-sun">
+            <use
+              class="theme__iqon"
+              href="./images/icons.svg#icon-sun-stroke"
+            ></use>
+          </svg>
+          <svg class="theme__iqon-moon theme-iqon-hidden">
+            <use
+              class="theme__iqon theme__moon"
+              href="./images/icons.svg#icon-moon-stroke"
+            ></use>
+          </svg>
+        </span>
+      </label>
+    </div>
+
+    <!-- Registration button -->
+
+    <button type="button" class="sign-btn sign-btn-in js-sign js-hidden">
+      <span class="sign__btn-text">Sign in</span>
+    </button>
+    <button type="button" class="sign-btn js-sign-out js-hidden">
+      <span class="sign__btn-text">Sign Out</span>
+    </button>
+    <!-- Search form -->
+    <fieldset class="header__search">
+      <form class="search-form" id="search-form">
+        <input
+          class="search-form__input"
+          type="text"
+          name="searchQuery"
+          placeholder="Start searching"
+          id="search"
+        />
+        <button class="search-form__btn" type="submit">
+          <svg
+            class="search-form__svg"
+            aria-label="search-form"
+            width="12"
+            height="12"
+          >
+            <use href="./images/icons.svg#icon-search"></use>
+          </svg>
+        </button>
+      </form>
+
+      <!-- Country form -->
+      <form class="country-form" id="country-form">
+        <input
+          class="country-form__input"
+          type="text"
+          name="countryQuery"
+          placeholder="Choose country"
+          id="country-input"
+          list="country-select"
+        />
+        <datalist class="country-form__select" id="country-select">
+          <option data-value=""></option>
+        </datalist>
+        <svg
+          class="country-form__svg"
+          aria-label="country-form"
+          width="16"
+          height="10"
+        >
+          <use href="./images/icons.svg#icon-select"></use>
+        </svg>
+      </form>
+    </fieldset>
+  </div>
+</header>

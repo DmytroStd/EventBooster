@@ -1,0 +1,21 @@
+@import './layout/theme';
+
+@import './utils/reset';
+@import './utils/variebles';
+
+@import './base/common';
+@import './base/container';
+
+@import './layout/spinner.scss';
+@import './layout/header';
+@import './layout/section_events';
+@import './layout/pagination';
+@import './layout/footer';
+@import './layout/backdrop';
+@import './layout/modal';
+@import './layout/basket';
+@import './layout/mini-modal';
+@import './layout/sticky';
+
+// @import './layout/login';
+@import './layout/registration';
